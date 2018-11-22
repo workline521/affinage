@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+    include ../components/main/main.pug
+    head
+        +head(head.defaults)
+    body.page.opacity
+        |%=symbols=%
+        +header()
+        button.header__btn(type='button')
+            span.header__line.header__line--1
+            span.header__line.header__line--2
+            span.header__line.header__line--3
+        +main()
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+

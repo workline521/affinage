@@ -1,0 +1,116 @@
+*
+    box-sizing border-box
+h1, h2, p
+    margin 0
+a
+    text-decoration none
+html
+    width 100%
+    height 100%
+body
+    width 100%
+    height 100vh
+    font-family 'Philosopher', 'Arial', sans-serif
+    color #000000
+    font-size 25px
+    font-weight 400
+    line-height 30px
+    overflow hidden
+.page
+    opacity 1
+    will-change opacity
+    transition opacity 0.8s ease-out
+.opacity
+    opacity 0
+.header
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+    height 100vh
+    width 400px
+    background #fff
+    z-index 9
+    position fixed
+    top 0
+    right 0
+    transition 0.3s linear
+    transform translateX(401px)
+    box-shadow -2px 0px 99px 0px rgba(0 ,0 ,0 , 0.065)
+    @media (max-width: 767px)
+        width 320px
+        transform translateX(321px)
+    &-opened
+        transform translateX(0)
+    &__btn
+        display block
+        width 54px
+        height 54px
+        position absolute
+        top 100px
+        right 80px
+        z-index 10
+        border 0
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAAXNSR0IB2cksfwAAAJxQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+I1M3gAAADR0Uk5TAAEDBwgODwQJIwYCLQ0KKxkeCyEfFTAUHDMYJhIiKCoyGzElJykQGhYsJC4gES8dDBMXBbfiafsAAAQoSURBVHicjVbneuMgEES21QuoC1VQ7/X93+1wcsldEsX2/EJ8jLYNuwBwAu4CrjfA34DAAfHswBkkAGRF1XQDKggB8wKs55wrALZzdT0/wGGkxThOTDUFyjObUoYsSCjKC9Mzy8rxQsxjnfJA/Z1zMetL7RGzibI2NYPK7wK5lPs0chxg/uqfCqwBZ2NSjo3tFGiYZhpofpAvxCSrB6RzT5WusoNEhsKwEWGQhlsWBpleaVMLE23Ba3Q9Ia2rsQZ9Nluam7aIj1cdTKDhlp330jouiqHF+k36QTsKjHNcd2jZBZ67cNxfFwC66R5srCUg2w97krHGyGzzdmyF6/ekbcc04LJPW3wTv9bwFmGsDUK+teJxEsFkWdSpAhbfVzfFmo6tFsOLcJotcJhLGO9zi9Xj8rl5ZXFl6T4LzTnpDivD3dwQpfxvj4udpDHH+HcWUJQVIbuz/5XdTzwMYduLxgMaOJbSg9Ec89uHrXUf9yyWH5HukNwt9GLykTO9wFEVUJV7zFJjRxvyMQPH/aCK0t7xCe88M8aUtE0obSj9a7yAiU2fs4BBvcij716uIylY7sfLMxJzrPYnO0uu94wbdV0VTvKCMXY2IcG8529S8XO53MeHyf/AoddmP4z3H/TemLnemRJ/4hLmTpNbaAWqss6l6b+SEVbh2yoPznxXSp3L2zC9xAJAmAM3haxubnlvbGX9Iu+amYNf7Gw1do0nPehn/2PLNifAdydpnixIe6HzvoEne9czJ31n86LoUF60lmzDSCFzUtSKVoYvlY1hgX5B7omw4eI5vPBE/u9QKZ9WmiAd7BJZhCbzixVQZr4wSXJjy16LaL3dXmEZoTumxH9bzq3n5M0LF4BhRFHktjWLqBaLyImb/YXKiYHU+RVO3qp1xQvRMvcVMZuBDGX9fR2gMWu2Znqey9EYpj3SgreAVG62iVa4xhMex5lNmZBi/fs9za62+2h9SGI0x48QQvvHuVhBsIJZspzNvU9IXB+nBdaWf8qwlzxw3av4gMfxdPEL6v8XCVdI2Bk8nD3wMzCq0E4xhvzn1kU1cNjtU9wGv9wEnYNC2S5U+Dr2dbkmPYvOkLaTsitMwqTOUoKHr/PPUuthSYuSzIL4XdXctY7LePD9uLaO76KYFjQUyxSW86q0nw80Tr1Y/L643ko0MtOflV3FSaOwqratn62Wcg17X9RKa7Rx6WqrJsvLFrtnreNq1hjBqGunLNWzYC+sQfKkOZ6nlM1RjfTnKjpENTcw60gzigcaevWMUnMME4ey0Z5cuNuvYqcAtpENU5gkA81Ms2KTyclwJUxL8BuHQQXhyuc8DvN+7otu7LoxxYluwuPRwxDcH0ugUm1zwps3Oni38ab3O1AfqvUdK7vFIPAtT4w1wPesbTznvENkrwcw3cB6Aed5+ANenHE1I7SM5wAAAABJRU5ErkJggg==') no-repeat center
+        padding 0
+        outline none
+        @media (max-width: 999px)
+            background transparent
+            top 0
+            right 2px
+    &__line
+        display block
+        position absolute
+        width 20px
+        height 2px
+        background #000
+        left 17px
+        transition 0.3s linear
+    &__line--1
+        top 20px
+    &__line--2
+        top 26px
+        opacity 1
+    &__line--3
+        bottom 20px
+    &__nav
+        display flex
+        flex-wrap wrap
+        flex-direction column
+        justify-content center
+        align-items flex-start
+        overflow hidden
+    &__link
+        display block
+        color #363636
+        margin-bottom 15px
+        position relative
+        font-family 'Geometria', sans-serif
+        font-weight 300
+        font-size 22px
+        font-style italic
+        &:last-child
+            margin-bottom 0
+        &:after
+            position absolute
+            content ''
+            left -100%
+            bottom 0
+            width 100%
+            height 1px
+            background rgba(54, 54, 54, 0.5)
+            transition 0.3s ease-out
+            @media (max-width: 999px)
+                display none
+        &:hover:after
+            left 0
+
+
+.opened .header__line--1
+    transform rotate(45deg)
+    top 26px
+.opened .header__line--2
+    opacity 0
+.opened .header__line--3
+    transform rotate(-45deg)
+    bottom 26px
